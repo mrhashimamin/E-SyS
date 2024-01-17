@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="src/icon.png" />
+    <script src="main.js" defer></script>
+    <title>E-SyS</title>
+  </head>
+  <body>
+    <header>
+      <section class="left-section">
+        <a href=""
+          ><i class="fa-solid fa-server"></i>
+          <h1>E-SyS</h1></a
+        >
+      </section>
+      <section class="right-section">
+        <button class="login" id="login">Log in</button>
+        <button class="signup" id="signup">Sign up</button>
+      </section>
+    </header>
+
+    <main class="main-content">
+      <h1>Sign up now!</h1>
+      <form action="" method="post" class="signup-form" id="signup-form">
+        <div class="f_row">
+          <input
+            type="text"
+            name="f_name"
+            id="fname"
+            placeholder="First name"
+            title="First name"
+            required
+            minlength="5"
+            maxlength="15"
+          />
+          <input
+            type="text"
+            name="l_name"
+            id="lname"
+            placeholder="Last name"
+            title="Last name"
+            required
+            minlength="5"
+            maxlength="15"
+          />
+        </div>
+        <section class="usr_name_sec">
+          <div class="usr_name_row">
+            <input
+              type="text"
+              name="usr_name"
+              id="usrname"
+              value=""
+              placeholder="Username"
+              title="Username"
+              required
+              minlength="5"
+              maxlength="10"
+            />
+            <button type="button" onclick="get_form_values()" title="Generate username or Check your username">
+              <i class="fa-solid fa-rotate"></i>
+            </button>
+          </div>
+          <div class="usr_name_sugs">
+            <p class="usr_name_sugs_val_co" id="usr_name_sugs_val_co"></p>
+            <p class="usr_name_sugs_val" id="username1" onclick="chng_el_val_usr(get_form_values())"></p>
+            <p class="usr_name_sugs_val" id="username_resp"></p>
+          </div>
+        </section>
+        <div class="pass-div">
+          <input
+            type="text"
+            name="usr_pass"
+            id="usrpass"
+            placeholder="Password"
+            value=""
+            title="Password"
+            required
+            minlength="7"
+            maxlength="20"
+          />
+          <button type="button" onclick="rndm_usr_pass(usr_data_arr[0],usr_data_arr[1])" title="Generate password">
+            <i class="fa-solid fa-shield"></i>
+            <span>Generate password</span>
+          </button>
+          <button class="copy-button" id="copy-button" type="button" onclick="cpy_pass()" title="Copy password">
+            <i class="fa-regular fa-copy" ></i>
+          </button>
+        </div>
+        <button class="joinus" type="submit" title="Join us">Join us</button>
+      </form>
+    </main>
+  </body>
+</html>
